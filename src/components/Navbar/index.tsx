@@ -17,11 +17,14 @@ export default function Navbar() {
         </S.NavbarLink>
       </S.NavbarLeft>
       <S.NavbarRight>
-        <Button type="buttonLogin" title="Clique aqui para entrar em uma conta">
+        <Button
+          variant="buttonLogin"
+          title="Clique aqui para entrar em uma conta"
+        >
           LOGIN
         </Button>
         <Button
-          type="buttonDefault"
+          variant="buttonDefault"
           title="Clique aqui para registrar uma conta nova"
         >
           REGISTER

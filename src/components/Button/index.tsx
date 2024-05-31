@@ -1,24 +1,51 @@
 import * as S from "./styles";
 
 export type Props = {
-  type: "buttonDefault" | "buttonLogin" | "buttonIco" | "buttonDrop";
+  variant: "buttonDefault" | "buttonLogin" | "buttonIco" | "buttonDrop";
   title: string;
-  children: string;
+  children: React.ReactNode;
+  isActive?: boolean;
+  onClick?: () => void;
 };
 
-export default function Button({ type, title, children }: Props) {
-  switch (type) {
+export default function Button({
+  variant,
+  title,
+  children,
+  isActive = false,
+  onClick,
+}: Props) {
+  switch (variant) {
     case "buttonDefault":
       return (
-        <S.ButtonDefault type={type} title={title}>
+        <S.ButtonDefault variant={variant} title={title}>
           {children}
         </S.ButtonDefault>
       );
     case "buttonLogin":
       return (
-        <S.ButtonLogin type={type} title={title}>
+        <S.ButtonLogin variant={variant} title={title}>
           {children}
         </S.ButtonLogin>
       );
+    case "buttonIco":
+      return (
+        <S.ButtonIco variant={variant} title={title}>
+          {children}
+        </S.ButtonIco>
+      );
+    case "buttonDrop":
+      return (
+        <S.ButtonDrop
+          variant={variant}
+          title={title}
+          isActive={isActive}
+          onClick={onClick}
+        >
+          {children}
+        </S.ButtonDrop>
+      );
+    default:
+      return null;
   }
 }
