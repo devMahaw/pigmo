@@ -1,6 +1,7 @@
 import { GlobalCss } from "@/styles";
 import Head from "next/head";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
+import Navbar from "@/components/Navbar";
 
 const myFont = localFont({ src: "../../public/fonts/aglet-sans-bold.otf" });
 
@@ -14,12 +15,14 @@ export default function Home() {
           content="Pigmo is a decentralized casino platform that allows users to play games with their own assets."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/pigmoIco.png" />
+        <link rel="icon" href="/assets/pigmoIco.svg" />
       </Head>
       <GlobalCss />
-      <body className={myFont.className}>
-        <h1>Olá mundo!</h1>
-      </body>
+      <div className={myFont.className}>
+        <header>
+          <Navbar />
+        </header>
+      </div>
     </>
   );
 }

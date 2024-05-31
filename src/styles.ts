@@ -6,7 +6,6 @@ export const colors = {
   darkPurple: "#35243D",
   darkPurpleIcons: "#4B3456",
   purpleTexts: "#644B72",
-  lightRed: "#FF6864",
   lightPurple: "#826B8E",
   white: "#FFFFFF",
   lightGray: "#E6E3E8",
@@ -27,5 +26,19 @@ export const GlobalCss = createGlobalStyle`
     padding: 0px;
     box-sizing: border-box;  
     list-style: none;
+    scrollbar-color: ${colors.darkPurple} transparent;
+    scrollbar-width: thin;
+    }
+
+    body {
+      background-color: ${colors.darkerPurple};
+      color: ${colors.lightPurple};
+      max-width: 1920px;
+      width: 100%;
+      height: 100%;
+    }
+
+    button {
+      cursor: pointer;
     }
 `;
