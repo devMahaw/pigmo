@@ -1,4 +1,5 @@
 import * as S from "./styles";
+import Button from "../Button";
 
 export default function Navbar() {
   const handleLogoClick = (
@@ -16,8 +17,15 @@ export default function Navbar() {
         </S.NavbarLink>
       </S.NavbarLeft>
       <S.NavbarRight>
-        <button></button>
-        <button></button>
+        <Button type="buttonLogin" title="Clique aqui para entrar em uma conta">
+          LOGIN
+        </Button>
+        <Button
+          type="buttonDefault"
+          title="Clique aqui para registrar uma conta nova"
+        >
+          REGISTER
+        </Button>
       </S.NavbarRight>
     </S.NavbarRow>
   );

@@ -3,7 +3,9 @@ import Head from "next/head";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 
-const myFont = localFont({ src: "../../public/fonts/aglet-sans-bold.otf" });
+export const myFont = localFont({
+  src: "../../public/fonts/aglet-sans-bold.otf",
+});
 
 export default function Home() {
   return (
