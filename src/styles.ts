@@ -34,7 +34,7 @@ export const GlobalCss = createGlobalStyle`
 
     body {
       background-color: ${colors.darkerPurple};
-      color: ${colors.lightPurple};
+      color: ${colors.white};
       max-width: 1920px;
       width: 100%;
       height: 100%;

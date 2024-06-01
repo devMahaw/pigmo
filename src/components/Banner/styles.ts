@@ -14,7 +14,6 @@ export const BannerImg = styled.div`
   h1 {
     font-size: 42px;
     line-height: 48px;
-    color: ${colors.white};
 
     span {
       color: ${colors.hotPink};
@@ -35,13 +34,13 @@ export const BannerText = styled.div`
     font-size: 20px;
     line-height: 22px;
     margin-bottom: 32px;
+    color: ${colors.lightPurple};
   }
 `;
 
 export const BannerTitle = styled.h1`
   font-size: 42px;
   line-height: 48px;
-  color: ${colors.white};
   margin-bottom: 12px;
 
   span {

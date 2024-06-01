@@ -3,6 +3,7 @@ import Head from "next/head";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
+import CriptoCard from "@/components/CriptoCard";
 
 export const myFont = localFont({
   src: "../../public/fonts/aglet-sans-bold.otf",
