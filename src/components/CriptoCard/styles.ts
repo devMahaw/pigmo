@@ -14,6 +14,22 @@ export const CriptoCardLink = styled.a`
   border: 1px solid ${colors.darkPurple};
   padding: 12px;
   position: relative;
+  background: linear-gradient(
+    129deg,
+    rgba(0, 0, 0, 0) 63.84%,
+    rgba(204, 149, 215, 0.15) 96.69%
+  );
+  transition: all 0.3s;
+
+  &:hover {
+    background: linear-gradient(
+      129deg,
+      rgba(204, 149, 215, 0.05) 63.84%,
+      rgba(255, 0, 184, 0.2) 96.69%
+    );
+
+    transform: translateY(-3%);
+  }
 `;
 
 export const CriptoValueDiv = styled.div<Props>`

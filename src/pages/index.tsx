@@ -3,7 +3,7 @@ import Head from "next/head";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
-import CriptoCard from "@/components/CriptoCard";
+import Carousel from "@/components/Carousel";
 
 export const myFont = localFont({
   src: "../../public/fonts/aglet-sans-bold.otf",
@@ -29,6 +29,9 @@ export default function Home() {
         <main>
           <section>
             <Banner />
+          </section>
+          <section>
+            <Carousel />
           </section>
         </main>
       </div>

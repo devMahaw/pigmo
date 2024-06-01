@@ -7,8 +7,6 @@ export const BannerImg = styled.div`
   height: 350px;
   background-image: url("/assets/banner.png");
   display: flex;
-  background-size: cover;
-  background-position: center;
   margin-left: auto;
 
   h1 {
