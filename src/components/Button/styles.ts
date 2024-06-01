@@ -38,7 +38,7 @@ export const ButtonLogin = styled.button`
   color: ${colors.lightGray};
   background-color: transparent;
   border: none;
-  margin-right: 20px;
+  margin-right: 12px;
   margin-top: 3px;
   font-family: ${myFont.style.fontFamily};
   font-size: 16px;
@@ -60,6 +60,7 @@ export const ButtonIco = styled.button`
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  margin-right: 8px;
 
   &:hover {
     border-color: ${colors.darkPurpleIcons};

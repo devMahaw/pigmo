@@ -6,6 +6,7 @@ export type Props = {
   children: React.ReactNode;
   isActive?: boolean;
   onClick?: () => void;
+  style?: React.CSSProperties;
 };
 
 export default function Button({
@@ -14,11 +15,12 @@ export default function Button({
   children,
   isActive = false,
   onClick,
+  style,
 }: Props) {
   switch (variant) {
     case "buttonDefault":
       return (
-        <S.ButtonDefault variant={variant} title={title}>
+        <S.ButtonDefault variant={variant} title={title} style={style}>
           {children}
         </S.ButtonDefault>
       );

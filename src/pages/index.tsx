@@ -2,6 +2,7 @@ import { GlobalCss } from "@/styles";
 import Head from "next/head";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
+import Banner from "@/components/Banner";
 
 export const myFont = localFont({
   src: "../../public/fonts/aglet-sans-bold.otf",
@@ -24,6 +25,11 @@ export default function Home() {
         <header>
           <Navbar />
         </header>
+        <main>
+          <section>
+            <Banner />
+          </section>
+        </main>
       </div>
     </>
   );
