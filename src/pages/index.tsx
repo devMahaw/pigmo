@@ -36,6 +36,9 @@ export default function Home() {
           <section>
             <Carousel variant="casino" />
           </section>
+          <section>
+            <Carousel variant="sports" />
+          </section>
         </main>
       </div>
     </>

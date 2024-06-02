@@ -1,6 +1,12 @@
 import Button from "../Button";
 import CriptoCard from "../CriptoCard";
-import { CarouselContent, CarouselRow } from "./styles";
+import {
+  CarouselCard,
+  CarouselContainer,
+  CarouselContent,
+  CarouselRow,
+  CarouselVoleiCard,
+} from "./styles";
 import { colors } from "@/styles";
 
 export type Props = {
@@ -59,26 +65,67 @@ export default function Carousel({ variant }: Props) {
     case "casino":
       return (
         <CarouselRow>
-          <div
-            style={{ display: "flex", alignItems: "center", marginTop: "52px" }}
-          >
+          <CarouselContainer>
             <img src="/assets/sete.svg" alt="Sete" />
-            <span style={{ marginLeft: "6px", marginRight: "40px" }}>
-              CASSINO
-            </span>
-          </div>
-          <CarouselContent>
-            <img src="/assets/originals.png" alt="Originals" />
-            <img src="/assets/slots.png" alt="Slots" />
-            <img src="/assets/gameShows.png" alt="Game Shows" />
-            <img src="/assets/liveCasino.png" alt="Live Casino" />
-            <img src="/assets/tableGames.png" alt="Table Games" />
-            <img src="/assets/blackjack.png" alt="Blackjack" />
-            <img src="/assets/roulette.png" alt="Roulette" />
+            <span style={{ marginLeft: "6px" }}>CASSINO</span>
+          </CarouselContainer>
+          <CarouselContent style={{ gap: "20px" }}>
+            <a href="">
+              <CarouselCard src="/assets/originals.png" alt="Originals" />
+            </a>
+            <a href="">
+              <CarouselCard src="/assets/slots.png" alt="Slots" />
+            </a>
+            <a href="">
+              <CarouselCard src="/assets/gameShows.png" alt="Game Shows" />
+            </a>
+            <a href="">
+              <CarouselCard src="/assets/liveCasino.png" alt="Live Casino" />
+            </a>
+            <a href="">
+              <CarouselCard src="/assets/tableGames.png" alt="Table Games" />
+            </a>
+            <a href="">
+              <CarouselCard src="/assets/blackjack.png" alt="Blackjack" />
+            </a>
+            <a href="">
+              <CarouselCard src="/assets/roulette.png" alt="Roulette" />
+            </a>
           </CarouselContent>
         </CarouselRow>
       );
 
     case "sports":
+      return (
+        <CarouselRow>
+          <CarouselContainer>
+            <img
+              src="/assets/americanBall.svg"
+              alt="Bola de futebol americano"
+            />
+            <span style={{ marginLeft: "6px" }}>ESPORTES</span>
+          </CarouselContainer>
+          <CarouselContent style={{ gap: "22px" }}>
+            <a href="">
+              <CarouselCard src="/assets/tenis.png" alt="Tênis de mesa" />
+            </a>
+            <a href="">
+              <CarouselVoleiCard src="/assets/volei.png" alt="Vôlei" />
+            </a>
+            <a href="">
+              <CarouselCard src="/assets/boxe.png" alt="Boxe" />
+            </a>
+            <a href="">
+              <CarouselCard src="/assets/golfe.png" alt="Golfe" />
+            </a>
+            <a href="">
+              <CarouselCard src="/assets/mma.png" alt="MMA" />
+            </a>
+            <a href="">
+              <CarouselCard src="/assets/sinuca.png" alt="Sinuca" />
+            </a>
+          </CarouselContent>
+        </CarouselRow>
+      );
   }
 }
