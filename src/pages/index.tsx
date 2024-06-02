@@ -31,7 +31,10 @@ export default function Home() {
             <Banner />
           </section>
           <section>
-            <Carousel />
+            <Carousel variant="cripto" />
+          </section>
+          <section>
+            <Carousel variant="casino" />
           </section>
         </main>
       </div>
