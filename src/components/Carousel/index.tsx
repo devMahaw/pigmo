@@ -1,12 +1,6 @@
 import Button from "../Button";
 import CriptoCard from "../CriptoCard";
-import {
-  CarouselCard,
-  CarouselContainer,
-  CarouselContent,
-  CarouselRow,
-  CarouselVoleiCard,
-} from "./styles";
+import * as S from "./styles";
 import { colors } from "@/styles";
 
 export type Props = {
@@ -17,11 +11,11 @@ export default function Carousel({ variant }: Props) {
   switch (variant) {
     case "cripto":
       return (
-        <CarouselRow>
+        <S.CarouselRow>
           <div
             style={{ display: "flex", alignItems: "center", marginTop: "42px" }}
           >
-            <img src="/assets/espadas.svg" alt="Espadas" />
+            <img src="/assets/criptoCarousel/espadas.svg" alt="Espadas" />
             <span style={{ marginLeft: "6px", marginRight: "40px" }}>
               CRIPTOMOEDAS
             </span>
@@ -51,81 +45,117 @@ export default function Carousel({ variant }: Props) {
               NEGOCIAR
             </Button>
           </div>
-          <CarouselContent>
+          <S.CarouselContent>
             <CriptoCard green={true} cripto="btc" />
             <CriptoCard green={false} cripto="eth" />
             <CriptoCard green={false} cripto="sol" />
             <CriptoCard green={true} cripto="bonk" />
             <CriptoCard green={true} cripto="doge" />
             <CriptoCard green={false} cripto="shib" />
-          </CarouselContent>
-        </CarouselRow>
+          </S.CarouselContent>
+        </S.CarouselRow>
       );
 
     case "casino":
       return (
-        <CarouselRow>
-          <CarouselContainer>
-            <img src="/assets/sete.svg" alt="Sete" />
+        <S.CarouselRow>
+          <S.CarouselContainer>
+            <img src="/assets/casinoCarousel/sete.svg" alt="Sete" />
             <span style={{ marginLeft: "6px" }}>CASSINO</span>
-          </CarouselContainer>
-          <CarouselContent style={{ gap: "20px" }}>
+          </S.CarouselContainer>
+          <S.CarouselContent style={{ gap: "20px" }}>
             <a href="">
-              <CarouselCard src="/assets/originals.png" alt="Originals" />
+              <S.CarouselCard
+                src="/assets/casinoCarousel/originals.png"
+                alt="Originals"
+              />
             </a>
             <a href="">
-              <CarouselCard src="/assets/slots.png" alt="Slots" />
+              <S.CarouselCard
+                src="/assets/casinoCarousel/slots.png"
+                alt="Slots"
+              />
             </a>
             <a href="">
-              <CarouselCard src="/assets/gameShows.png" alt="Game Shows" />
+              <S.CarouselCard
+                src="/assets/casinoCarousel/gameShows.png"
+                alt="Game Shows"
+              />
             </a>
             <a href="">
-              <CarouselCard src="/assets/liveCasino.png" alt="Live Casino" />
+              <S.CarouselCard
+                src="/assets/casinoCarousel/liveCasino.png"
+                alt="Live Casino"
+              />
             </a>
             <a href="">
-              <CarouselCard src="/assets/tableGames.png" alt="Table Games" />
+              <S.CarouselCard
+                src="/assets/casinoCarousel/tableGames.png"
+                alt="Table Games"
+              />
             </a>
             <a href="">
-              <CarouselCard src="/assets/blackjack.png" alt="Blackjack" />
+              <S.CarouselCard
+                src="/assets/casinoCarousel/blackjack.png"
+                alt="Blackjack"
+              />
             </a>
             <a href="">
-              <CarouselCard src="/assets/roulette.png" alt="Roulette" />
+              <S.CarouselCard
+                src="/assets/casinoCarousel/roulette.png"
+                alt="Roulette"
+              />
             </a>
-          </CarouselContent>
-        </CarouselRow>
+          </S.CarouselContent>
+        </S.CarouselRow>
       );
 
     case "sports":
       return (
-        <CarouselRow>
-          <CarouselContainer>
+        <S.CarouselRow>
+          <S.CarouselContainer>
             <img
-              src="/assets/americanBall.svg"
+              src="/assets/sportsCarousel/americanBall.svg"
               alt="Bola de futebol americano"
             />
             <span style={{ marginLeft: "6px" }}>ESPORTES</span>
-          </CarouselContainer>
-          <CarouselContent style={{ gap: "22px" }}>
+          </S.CarouselContainer>
+          <S.CarouselContent style={{ gap: "22px" }}>
             <a href="">
-              <CarouselCard src="/assets/tenis.png" alt="Tênis de mesa" />
+              <S.CarouselCard
+                src="/assets/sportsCarousel/tenis.png"
+                alt="Tênis de mesa"
+              />
             </a>
             <a href="">
-              <CarouselVoleiCard src="/assets/volei.png" alt="Vôlei" />
+              <S.CarouselVoleiCard
+                src="/assets/sportsCarousel/volei.png"
+                alt="Vôlei"
+              />
             </a>
             <a href="">
-              <CarouselCard src="/assets/boxe.png" alt="Boxe" />
+              <S.CarouselCard
+                src="/assets/sportsCarousel/boxe.png"
+                alt="Boxe"
+              />
             </a>
             <a href="">
-              <CarouselCard src="/assets/golfe.png" alt="Golfe" />
+              <S.CarouselCard
+                src="/assets/sportsCarousel/golfe.png"
+                alt="Golfe"
+              />
             </a>
             <a href="">
-              <CarouselCard src="/assets/mma.png" alt="MMA" />
+              <S.CarouselCard src="/assets/sportsCarousel/mma.png" alt="MMA" />
             </a>
             <a href="">
-              <CarouselCard src="/assets/sinuca.png" alt="Sinuca" />
+              <S.CarouselCard
+                src="/assets/sportsCarousel/sinuca.png"
+                alt="Sinuca"
+              />
             </a>
-          </CarouselContent>
-        </CarouselRow>
+          </S.CarouselContent>
+        </S.CarouselRow>
       );
   }
 }

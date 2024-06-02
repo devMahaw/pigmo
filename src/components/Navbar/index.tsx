@@ -11,9 +11,9 @@ export default function Navbar() {
   return (
     <S.NavbarRow>
       <S.NavbarLeft>
-        <S.NavbarHamburger src="/assets/hamburger.svg" alt="Hamburger Menu" />
+        <S.NavbarHamburger src="/assets/navBarImages/hamburger.svg" alt="Hamburger Menu" />
         <S.NavbarLink href="" onClick={handleLogoClick}>
-          <S.NavbarPigmo src="/assets/pigmoLogo.svg" alt="Pigmo Logo" />
+          <S.NavbarPigmo src="/assets/navBarImages/pigmoLogo.svg" alt="Pigmo Logo" />
         </S.NavbarLink>
       </S.NavbarLeft>
       <S.NavbarRight>

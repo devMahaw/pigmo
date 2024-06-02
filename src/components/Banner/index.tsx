@@ -26,19 +26,19 @@ export default function Banner() {
             variant="buttonIco"
             title="Clique aqui para se conectar com uma conta google"
           >
-            <img src="/assets/googleIco.svg" alt="Google" />
+            <img src="/assets/bannerImages/googleIco.svg" alt="Google" />
           </Button>
           <Button
             variant="buttonIco"
             title="Clique aqui para conectar uma carteira"
           >
-            <img src="/assets/wolfIco.svg" alt="Carteira" />
+            <img src="/assets/bannerImages/wolfIco.svg" alt="Carteira" />
           </Button>
           <Button
             variant="buttonIco"
             title="Clique aqui para se conectar com uma carteira de criptomedas"
           >
-            <img src="/assets/sIco.svg" alt="Criptomoeda" />
+            <img src="/assets/bannerImages/sIco.svg" alt="Criptomoeda" />
           </Button>
         </BannerButtons>
       </div>

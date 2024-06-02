@@ -8,12 +8,12 @@ export type Props = {
 
 export default function CriptoCard({ green, cripto }: Props) {
   const criptoIcons: { [key in Props["cripto"]]: string } = {
-    btc: "/assets/bitcoin.svg",
-    eth: "/assets/ethereum.svg",
-    sol: "/assets/solana.svg",
-    bonk: "/assets/bonk.svg",
-    doge: "/assets/doge.svg",
-    shib: "/assets/shiba.svg",
+    btc: "/assets/criptoCarousel/bitcoin.svg",
+    eth: "/assets/criptoCarousel/ethereum.svg",
+    sol: "/assets/criptoCarousel/solana.svg",
+    bonk: "/assets/criptoCarousel/bonk.svg",
+    doge: "/assets/criptoCarousel/doge.svg",
+    shib: "/assets/criptoCarousel/shiba.svg",
   };
 
   return (
@@ -30,7 +30,7 @@ export default function CriptoCard({ green, cripto }: Props) {
         </span>
         <S.CriptoValueDiv green={green}>
           <img
-            src={green ? "/assets/greenArrow.svg" : "/assets/redArrow.svg"}
+            src={green ? "/assets/criptoCarousel/greenArrow.svg" : "/assets/criptoCarousel/redArrow.svg"}
             alt={green ? "Seta Verde" : "Seta Vermelha"}
           />
           <S.CriptoTextLittle>2.13%</S.CriptoTextLittle>

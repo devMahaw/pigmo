@@ -5,7 +5,7 @@ export const BannerImg = styled.div`
   max-width: 1680px;
   width: 100%;
   height: 350px;
-  background-image: url("/assets/banner.png");
+  background-image: url("/assets/bannerImages/banner.png");
   display: flex;
   margin-left: auto;
 
