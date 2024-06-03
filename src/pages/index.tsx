@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
 import Carousel from "@/components/Carousel";
+import Footer from "@/components/Footer";
 
 export const myFont = localFont({
   src: "../../public/fonts/aglet-sans-bold.otf",
@@ -40,6 +41,9 @@ export default function Home() {
             <Carousel variant="sports" />
           </section>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   );

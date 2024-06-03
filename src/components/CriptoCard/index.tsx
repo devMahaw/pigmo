@@ -30,7 +30,11 @@ export default function CriptoCard({ green, cripto }: Props) {
         </span>
         <S.CriptoValueDiv green={green}>
           <img
-            src={green ? "/assets/criptoCarousel/greenArrow.svg" : "/assets/criptoCarousel/redArrow.svg"}
+            src={
+              green
+                ? "/assets/criptoCarousel/greenArrow.svg"
+                : "/assets/criptoCarousel/redArrow.svg"
+            }
             alt={green ? "Seta Verde" : "Seta Vermelha"}
           />
           <S.CriptoTextLittle>2.13%</S.CriptoTextLittle>
