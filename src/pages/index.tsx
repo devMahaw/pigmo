@@ -29,21 +29,21 @@ export default function Home() {
           <Navbar />
         </header>
         <main>
-          <Sidebar />
-          <div>
-            <section>
-              <Banner />
-            </section>
-            <section>
-              <Carousel variant="cripto" />
-            </section>
-            <section>
-              <Carousel variant="casino" />
-            </section>
-            <section>
-              <Carousel variant="sports" />
-            </section>
-          </div>
+          <section>
+            <Sidebar />
+          </section>
+          <section>
+            <Banner />
+          </section>
+          <section>
+            <Carousel variant="cripto" />
+          </section>
+          <section>
+            <Carousel variant="casino" />
+          </section>
+          <section>
+            <Carousel variant="sports" />
+          </section>
         </main>
         <footer>
           <Footer />
