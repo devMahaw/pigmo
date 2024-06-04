@@ -4,7 +4,7 @@ import { BannerButtons, BannerImg, BannerText, BannerTitle } from "./styles";
 export default function Banner() {
   return (
     <BannerImg>
-      <div>
+      <div style={{ marginLeft: "-46px" }}>
         <BannerText>
           <BannerTitle>
             Boas vindas ao <span>Pigmo</span>!

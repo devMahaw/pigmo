@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { colors } from "@/styles";
 
 export const NavbarRow = styled.div`
-  max-width: 1680px;
+  max-width: 1630px;
+  margin-left: auto;
   width: 100%;
   height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: auto;
   border-bottom: 1px solid ${colors.darkPurple};
 `;
 

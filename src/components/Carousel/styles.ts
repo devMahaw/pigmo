@@ -3,8 +3,8 @@ import { breakpoints } from "@/styles";
 
 export const CarouselRow = styled.div`
   max-width: 1410px;
-  width: 100%;
   margin-left: auto;
+  width: 100%;
 `;
 
 export const CarouselContent = styled.div`

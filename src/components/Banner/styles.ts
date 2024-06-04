@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { colors } from "@/styles";
 
 export const BannerImg = styled.div`
-  max-width: 1680px;
+  max-width: 1630px;
+  margin-left: auto;
   width: 100%;
   height: 350px;
   background-image: url("/assets/bannerImages/banner.png");
   display: flex;
-  margin-left: auto;
 
   h1 {
     font-size: 42px;

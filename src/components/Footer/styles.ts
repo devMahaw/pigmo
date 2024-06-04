@@ -3,9 +3,9 @@ import { colors } from "@/styles";
 import { Props } from ".";
 
 export const FooterRow = styled.div`
-  max-width: 1680px;
-  width: 100%;
+  max-width: 1630px;
   margin-left: auto;
+  width: 100%;
 `;
 
 export const FooterText = styled.p`

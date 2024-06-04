@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
 import Carousel from "@/components/Carousel";
 import Footer from "@/components/Footer";
+import Sidebar from "@/components/Sidebar";
 
 export const myFont = localFont({
   src: "../../public/fonts/aglet-sans-bold.otf",
@@ -28,18 +29,21 @@ export default function Home() {
           <Navbar />
         </header>
         <main>
-          <section>
-            <Banner />
-          </section>
-          <section>
-            <Carousel variant="cripto" />
-          </section>
-          <section>
-            <Carousel variant="casino" />
-          </section>
-          <section>
-            <Carousel variant="sports" />
-          </section>
+          <Sidebar />
+          <div>
+            <section>
+              <Banner />
+            </section>
+            <section>
+              <Carousel variant="cripto" />
+            </section>
+            <section>
+              <Carousel variant="casino" />
+            </section>
+            <section>
+              <Carousel variant="sports" />
+            </section>
+          </div>
         </main>
         <footer>
           <Footer />

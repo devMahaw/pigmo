@@ -26,153 +26,154 @@ export default function Footer({ onClick }: Props) {
           backgroundColor: `${colors.darkerPurpleFooter}`,
           marginTop: "100px",
           borderTop: `1px solid ${colors.darkPurple}`,
+          borderBottom: `1px solid ${colors.darkPurple}`,
         }}
       >
-        <div style={{ display: "flex" }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              marginLeft: "230px",
-              marginTop: "80px",
-            }}
-          >
-            <img
-              src="/assets/footerImages/pigmoLogoWhite.png"
-              alt="Pigmo Logo"
-            />
-            <div style={{ display: "flex", marginBottom: "24px" }}>
+        <div>
+          <div style={{ display: "flex", marginLeft: "158px" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginTop: "80px",
+              }}
+            >
               <img
-                src="/assets/footerImages/pigNose.svg"
-                alt="Nariz de porco"
+                src="/assets/footerImages/pigmoLogoWhite.png"
+                alt="Pigmo Logo"
               />
-              <S.FooterText style={{ marginLeft: "24px" }}>
-                <span>BEYOND</span> LUCK
-              </S.FooterText>
-              <img
-                src="/assets/footerImages/pigNose.svg"
-                alt="Nariz de porco"
-              />
+              <div style={{ display: "flex", marginBottom: "24px" }}>
+                <img
+                  src="/assets/footerImages/pigNose.svg"
+                  alt="Nariz de porco"
+                />
+                <S.FooterText style={{ marginLeft: "24px" }}>
+                  <span>BEYOND</span> LUCK
+                </S.FooterText>
+                <img
+                  src="/assets/footerImages/pigNose.svg"
+                  alt="Nariz de porco"
+                />
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                marginLeft: "60px",
+                marginTop: "50px",
+              }}
+            >
+              <S.FooterList>
+                <span>PLATAFORM</span>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("About")}
+                  isActive={clickedItem === "About"}
+                >
+                  About
+                </S.FooterListItem>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("Support")}
+                  isActive={clickedItem === "Support"}
+                >
+                  Support
+                </S.FooterListItem>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("Provably Fair")}
+                  isActive={clickedItem === "Provably Fair"}
+                >
+                  Provably Fair
+                </S.FooterListItem>
+              </S.FooterList>
+              <S.FooterList>
+                <span>POLICY</span>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("Terms of Service")}
+                  isActive={clickedItem === "Terms of Service"}
+                >
+                  Terms of Service
+                </S.FooterListItem>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("Privacy Policy")}
+                  isActive={clickedItem === "Privacy Policy"}
+                >
+                  Privacy Policy
+                </S.FooterListItem>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("License")}
+                  isActive={clickedItem === "License"}
+                >
+                  License
+                </S.FooterListItem>
+              </S.FooterList>
+              <S.FooterList style={{ marginRight: "24px" }}>
+                <span>COMMUNITY</span>
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(2, 1fr)",
+                    columnGap: "48px",
+                  }}
+                >
+                  <S.FooterListItem
+                    onClick={() => handleButtonClick("Twitter")}
+                    isActive={clickedItem === "Twitter"}
+                  >
+                    Twitter
+                  </S.FooterListItem>
+                  <S.FooterListItem
+                    onClick={() => handleButtonClick("Instagram")}
+                    isActive={clickedItem === "Instagram"}
+                  >
+                    Instagram
+                  </S.FooterListItem>
+                  <S.FooterListItem
+                    onClick={() => handleButtonClick("Facebook")}
+                    isActive={clickedItem === "Facebook"}
+                  >
+                    Facebook
+                  </S.FooterListItem>
+                  <S.FooterListItem
+                    onClick={() => handleButtonClick("Telegram")}
+                    isActive={clickedItem === "Telegram"}
+                  >
+                    Telegram
+                  </S.FooterListItem>
+                  <S.FooterListItem
+                    onClick={() => handleButtonClick("Discord")}
+                    isActive={clickedItem === "Discord"}
+                  >
+                    Discord
+                  </S.FooterListItem>
+                  <S.FooterListItem
+                    onClick={() => handleButtonClick("Zealy")}
+                    isActive={clickedItem === "Zealy"}
+                  >
+                    Zealy
+                  </S.FooterListItem>
+                </div>
+              </S.FooterList>
             </div>
           </div>
-          <div
-            style={{
-              display: "flex",
-              marginLeft: "60px",
-              marginTop: "50px",
-            }}
-          >
-            <S.FooterList>
-              <span>PLATAFORM</span>
-              <S.FooterListItem
-                onClick={() => handleButtonClick("About")}
-                isActive={clickedItem === "About"}
-              >
-                About
-              </S.FooterListItem>
-              <S.FooterListItem
-                onClick={() => handleButtonClick("Support")}
-                isActive={clickedItem === "Support"}
-              >
-                Support
-              </S.FooterListItem>
-              <S.FooterListItem
-                onClick={() => handleButtonClick("Provably Fair")}
-                isActive={clickedItem === "Provably Fair"}
-              >
-                Provably Fair
-              </S.FooterListItem>
-            </S.FooterList>
-            <S.FooterList>
-              <span>POLICY</span>
-              <S.FooterListItem
-                onClick={() => handleButtonClick("Terms of Service")}
-                isActive={clickedItem === "Terms of Service"}
-              >
-                Terms of Service
-              </S.FooterListItem>
-              <S.FooterListItem
-                onClick={() => handleButtonClick("Privacy Policy")}
-                isActive={clickedItem === "Privacy Policy"}
-              >
-                Privacy Policy
-              </S.FooterListItem>
-              <S.FooterListItem
-                onClick={() => handleButtonClick("License")}
-                isActive={clickedItem === "License"}
-              >
-                License
-              </S.FooterListItem>
-            </S.FooterList>
-            <S.FooterList style={{ marginRight: "24px" }}>
-              <span>COMMUNITY</span>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(2, 1fr)",
-                  columnGap: "48px",
-                }}
-              >
-                <S.FooterListItem
-                  onClick={() => handleButtonClick("Twitter")}
-                  isActive={clickedItem === "Twitter"}
-                >
-                  Twitter
-                </S.FooterListItem>
-                <S.FooterListItem
-                  onClick={() => handleButtonClick("Instagram")}
-                  isActive={clickedItem === "Instagram"}
-                >
-                  Instagram
-                </S.FooterListItem>
-                <S.FooterListItem
-                  onClick={() => handleButtonClick("Facebook")}
-                  isActive={clickedItem === "Facebook"}
-                >
-                  Facebook
-                </S.FooterListItem>
-                <S.FooterListItem
-                  onClick={() => handleButtonClick("Telegram")}
-                  isActive={clickedItem === "Telegram"}
-                >
-                  Telegram
-                </S.FooterListItem>
-                <S.FooterListItem
-                  onClick={() => handleButtonClick("Discord")}
-                  isActive={clickedItem === "Discord"}
-                >
-                  Discord
-                </S.FooterListItem>
-                <S.FooterListItem
-                  onClick={() => handleButtonClick("Zealy")}
-                  isActive={clickedItem === "Zealy"}
-                >
-                  Zealy
-                </S.FooterListItem>
-              </div>
-            </S.FooterList>
-          </div>
-        </div>
-        <div>
-          <div style={{ display: "flex" }}>
-            <S.FooterLinkDiscord href="" style={{ marginLeft: "250px" }}>
-              <img src="/assets/footerImages/discord.png" alt="Discord" />
-              <p>Join Discord's largest community of players now!</p>
-            </S.FooterLinkDiscord>
-            <S.FooterLinkTelegram href="" style={{ marginLeft: "20px" }}>
-              <img src="/assets/footerImages/telegram.svg" alt="Telegram" />
-              <p>Pigmo is also on Telegram. Discover more now</p>
-            </S.FooterLinkTelegram>
-            <S.FooterLinkTwitter href="" style={{ marginLeft: "20px" }}>
-              <img src="/assets/footerImages/twitter.svg" alt="Twitter" />
-              <p>Follow us on X and keep up everything about us</p>
-            </S.FooterLinkTwitter>
+          <div>
+            <div style={{ display: "flex" }}>
+              <S.FooterLinkDiscord href="" style={{ marginLeft: "180px" }}>
+                <img src="/assets/footerImages/discord.png" alt="Discord" />
+                <p>Join Discord's largest community of players now!</p>
+              </S.FooterLinkDiscord>
+              <S.FooterLinkTelegram href="" style={{ marginLeft: "20px" }}>
+                <img src="/assets/footerImages/telegram.svg" alt="Telegram" />
+                <p>Pigmo is also on Telegram. Discover more now</p>
+              </S.FooterLinkTelegram>
+              <S.FooterLinkTwitter href="" style={{ marginLeft: "20px" }}>
+                <img src="/assets/footerImages/twitter.svg" alt="Twitter" />
+                <p>Follow us on X and keep up everything about us</p>
+              </S.FooterLinkTwitter>
+            </div>
           </div>
         </div>
       </div>
       <div
         style={{
-          borderTop: `1px solid ${colors.darkPurple}`,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -198,7 +199,7 @@ export default function Footer({ onClick }: Props) {
             style={{
               fontSize: "14px",
               color: `${colors.lightPurple}`,
-              margin: "0px 230px 0px 16px",
+              margin: "0px 160px 0px 16px",
             }}
           >
             CONTACT US
