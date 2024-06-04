@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { breakpoints } from "@/styles";
 
 export const CarouselRow = styled.div`
-  max-width: 1410px;
-  margin-left: auto;
+  max-width: 1200px;
   width: 100%;
 `;
 

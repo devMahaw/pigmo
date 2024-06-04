@@ -25,29 +25,35 @@ export default function Home() {
       </Head>
       <GlobalCss />
       <div className={myFont.className}>
-        <header>
-          <Navbar />
-        </header>
-        <main>
-          <section>
-            <Sidebar />
-          </section>
-          <section>
-            <Banner />
-          </section>
-          <section>
-            <Carousel variant="cripto" />
-          </section>
-          <section>
-            <Carousel variant="casino" />
-          </section>
-          <section>
-            <Carousel variant="sports" />
-          </section>
-        </main>
-        <footer>
-          <Footer />
-        </footer>
+        <Sidebar />
+        <div
+          style={{
+            maxWidth: "calc(100% - 240px)",
+            width: "100%",
+            marginLeft: "auto",
+          }}
+        >
+          <header>
+            <Navbar />
+          </header>
+          <main>
+            <section>
+              <Banner />
+            </section>
+            <section>
+              <Carousel variant="cripto" />
+            </section>
+            <section>
+              <Carousel variant="casino" />
+            </section>
+            <section>
+              <Carousel variant="sports" />
+            </section>
+          </main>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
       </div>
     </>
   );

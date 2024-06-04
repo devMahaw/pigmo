@@ -2,9 +2,6 @@ import styled from "styled-components";
 import { colors } from "@/styles";
 
 export const NavbarRow = styled.div`
-  max-width: 1630px;
-  margin-left: auto;
-  width: 100%;
   height: 72px;
   display: flex;
   align-items: center;

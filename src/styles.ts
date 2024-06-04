@@ -17,7 +17,7 @@ export const colors = {
 };
 
 export const breakpoints = {
-  desktop: "1200px",
+  desktop: "1366px",
   tablet: "768px",
 };
 

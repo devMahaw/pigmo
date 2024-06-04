@@ -20,7 +20,7 @@ export default function Footer({ onClick }: Props) {
   };
 
   return (
-    <S.FooterRow>
+    <div>
       <div
         style={{
           backgroundColor: `${colors.darkerPurpleFooter}`,
@@ -30,7 +30,7 @@ export default function Footer({ onClick }: Props) {
         }}
       >
         <div>
-          <div style={{ display: "flex", marginLeft: "158px" }}>
+          <div style={{ display: "flex", marginLeft: "160px" }}>
             <div
               style={{
                 display: "flex",
@@ -206,6 +206,6 @@ export default function Footer({ onClick }: Props) {
           </p>
         </div>
       </div>
-    </S.FooterRow>
+    </div>
   );
 }

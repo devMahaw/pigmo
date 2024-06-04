@@ -2,12 +2,6 @@ import styled from "styled-components";
 import { colors } from "@/styles";
 import { Props } from ".";
 
-export const FooterRow = styled.div`
-  max-width: 1630px;
-  margin-left: auto;
-  width: 100%;
-`;
-
 export const FooterText = styled.p`
   font-size: 12px;
   line-height: 32px;
