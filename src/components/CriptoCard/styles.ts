@@ -9,7 +9,6 @@ export const CriptoCardLink = styled.a`
   width: 182px;
   height: 162px;
   color: inherit;
-  text-decoration: none;
   border-radius: 8px;
   border: 1px solid ${colors.darkPurple};
   padding: 12px;
@@ -24,7 +23,7 @@ export const CriptoCardLink = styled.a`
   &:hover {
     background: linear-gradient(
       129deg,
-      rgba(204, 149, 215, 0.07) 63.84%,
+      rgba(204, 149, 215, 0.08) 63.84%,
       rgba(255, 0, 184, 0.2) 96.69%
     );
 

@@ -30,6 +30,7 @@ export const GlobalCss = createGlobalStyle`
     list-style: none;
     scrollbar-color: ${colors.darkPurple} transparent;
     scrollbar-width: thin;
+    text-decoration: none;
     }
 
     body {
