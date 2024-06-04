@@ -7,11 +7,16 @@ export type Props = {
   onClick?: () => void;
 };
 
-export default function Footer({ isActive, onClick }: Props) {
-  const [isItemActive, setIsItemActive] = useState(false);
+export default function Footer({ onClick }: Props) {
+  const [clickedItem, setClickedItem] = useState("");
 
-  const handleButtonClick = () => {
-    setIsItemActive((prevIsItemActive) => !prevIsItemActive);
+  const handleButtonClick = (item) => {
+    if (item === clickedItem) {
+      setClickedItem("");
+    } else {
+      setClickedItem(item);
+      onClick?.();
+    }
   };
 
   return (
@@ -60,20 +65,20 @@ export default function Footer({ isActive, onClick }: Props) {
             <S.FooterList>
               <span>PLATAFORM</span>
               <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
+                onClick={() => handleButtonClick("About")}
+                isActive={clickedItem === "About"}
               >
                 About
               </S.FooterListItem>
               <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
+                onClick={() => handleButtonClick("Support")}
+                isActive={clickedItem === "Support"}
               >
                 Support
               </S.FooterListItem>
               <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
+                onClick={() => handleButtonClick("Provably Fair")}
+                isActive={clickedItem === "Provably Fair"}
               >
                 Provably Fair
               </S.FooterListItem>
@@ -81,86 +86,100 @@ export default function Footer({ isActive, onClick }: Props) {
             <S.FooterList>
               <span>POLICY</span>
               <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
+                onClick={() => handleButtonClick("Terms of Service")}
+                isActive={clickedItem === "Terms of Service"}
               >
                 Terms of Service
               </S.FooterListItem>
               <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
+                onClick={() => handleButtonClick("Privacy Policy")}
+                isActive={clickedItem === "Privacy Policy"}
               >
                 Privacy Policy
               </S.FooterListItem>
               <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
+                onClick={() => handleButtonClick("License")}
+                isActive={clickedItem === "License"}
               >
                 License
               </S.FooterListItem>
             </S.FooterList>
             <S.FooterList style={{ marginRight: "24px" }}>
               <span>COMMUNITY</span>
-              <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(2, 1fr)",
+                  columnGap: "48px",
+                }}
               >
-                Twitter
-              </S.FooterListItem>
-              <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
-              >
-                Instagram
-              </S.FooterListItem>
-              <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
-              >
-                Facebook
-              </S.FooterListItem>
-            </S.FooterList>
-            <S.FooterList style={{ marginTop: "28.5px" }}>
-              <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
-              >
-                Telegram
-              </S.FooterListItem>
-              <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
-              >
-                Discord
-              </S.FooterListItem>
-              <S.FooterListItem
-                onClick={handleButtonClick}
-                isActive={isItemActive}
-              >
-                Zealy
-              </S.FooterListItem>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("Twitter")}
+                  isActive={clickedItem === "Twitter"}
+                >
+                  Twitter
+                </S.FooterListItem>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("Instagram")}
+                  isActive={clickedItem === "Instagram"}
+                >
+                  Instagram
+                </S.FooterListItem>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("Facebook")}
+                  isActive={clickedItem === "Facebook"}
+                >
+                  Facebook
+                </S.FooterListItem>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("Telegram")}
+                  isActive={clickedItem === "Telegram"}
+                >
+                  Telegram
+                </S.FooterListItem>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("Discord")}
+                  isActive={clickedItem === "Discord"}
+                >
+                  Discord
+                </S.FooterListItem>
+                <S.FooterListItem
+                  onClick={() => handleButtonClick("Zealy")}
+                  isActive={clickedItem === "Zealy"}
+                >
+                  Zealy
+                </S.FooterListItem>
+              </div>
             </S.FooterList>
           </div>
         </div>
         <div>
-          <div>
-            <S.FooterLink href="">
+          <div style={{ display: "flex" }}>
+            <S.FooterLinkDiscord href="" style={{ marginLeft: "250px" }}>
               <img src="/assets/footerImages/discord.png" alt="Discord" />
               <p>Join Discord's largest community of players now!</p>
-            </S.FooterLink>
-            <S.FooterLink href="">
+            </S.FooterLinkDiscord>
+            <S.FooterLinkTelegram href="" style={{ marginLeft: "20px" }}>
               <img src="/assets/footerImages/telegram.svg" alt="Telegram" />
               <p>Pigmo is also on Telegram. Discover more now</p>
-            </S.FooterLink>
-            <S.FooterLink href="">
+            </S.FooterLinkTelegram>
+            <S.FooterLinkTwitter href="" style={{ marginLeft: "20px" }}>
               <img src="/assets/footerImages/twitter.svg" alt="Twitter" />
               <p>Follow us on X and keep up everything about us</p>
-            </S.FooterLink>
+            </S.FooterLinkTwitter>
           </div>
         </div>
       </div>
-      <div>
-        <div>
+      <div
+        style={{
+          borderTop: `1px solid ${colors.darkPurple}`,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          height: "72px",
+        }}
+      >
+        <div style={{ marginLeft: "40px" }}>
           <p style={{ fontSize: "14px" }}>
             @2024 Pigmo{" "}
             <span style={{ color: `${colors.lightPurple}` }}>
@@ -169,9 +188,19 @@ export default function Footer({ isActive, onClick }: Props) {
             </span>
           </p>
         </div>
-        <div>
-          <img src="/assets/footerImages/envelope.svg" alt="Envelope" />
-          <p style={{ fontSize: "14px", color: `${colors.lightPurple}` }}>
+        <div style={{ display: "flex" }}>
+          <img
+            src="/assets/footerImages/envelope.svg"
+            alt="Envelope"
+            style={{ width: "18px" }}
+          />
+          <p
+            style={{
+              fontSize: "14px",
+              color: `${colors.lightPurple}`,
+              margin: "0px 230px 0px 16px",
+            }}
+          >
             CONTACT US
           </p>
         </div>
