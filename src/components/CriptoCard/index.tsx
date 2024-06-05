@@ -32,7 +32,7 @@ export default function CriptoCard({ green, cripto }: Props) {
           <img
             src={
               green
-                ? "/assets/criptoCarousel/greenArrow.svg"
+                ? "/assets/greenArrow.svg"
                 : "/assets/criptoCarousel/redArrow.svg"
             }
             alt={green ? "Seta Verde" : "Seta Vermelha"}
