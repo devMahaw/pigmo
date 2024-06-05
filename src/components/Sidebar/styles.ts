@@ -119,6 +119,6 @@ export const SidebarHelp = styled.div`
 export const HelpImage = styled.img`
   position: absolute;
   top: -63px;
-  right: -30px;
+  right: -22px;
   height: auto;
 `;
