@@ -1,12 +1,7 @@
 import * as S from "./styles";
 
 export type Props = {
-  variant:
-    | "buttonDefault"
-    | "buttonLogin"
-    | "buttonIco"
-    | "buttonDrop"
-    | "buttonArrow";
+  variant: "buttonDefault" | "buttonLogin" | "buttonIco" | "buttonDrop";
   title: string;
   children: React.ReactNode;
   isActive?: boolean;

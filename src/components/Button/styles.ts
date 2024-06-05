@@ -83,7 +83,7 @@ export const ButtonDrop = styled.button<Props>`
   font-family: ${myFont.style.fontFamily};
   font-size: 14px;
   border: none;
-  border-bottom: 1px solid ${colors.darkPurple};
+  border: 1px solid ${colors.darkPurple};
 
   span {
     margin: 12px 24px;
