@@ -10,18 +10,22 @@ export default function Navbar() {
 
   return (
     <S.NavbarRow>
-      <S.NavbarLeft>
+      <div style={{ display: "flex", alignItems: "center" }}>
         <S.NavbarHamburger
           src="/assets/navBarImages/hamburger.svg"
           alt="Hamburger Menu"
         />
-        <S.NavbarLink href="" onClick={handleLogoClick}>
+        <a
+          href=""
+          onClick={handleLogoClick}
+          style={{ display: "flex", alignItems: "center" }}
+        >
           <S.NavbarPigmo
             src="/assets/navBarImages/pigmoLogo.svg"
             alt="Pigmo Logo"
           />
-        </S.NavbarLink>
-      </S.NavbarLeft>
+        </a>
+      </div>
       <S.NavbarRight>
         <Button
           variant="buttonLogin"

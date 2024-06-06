@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "@/styles";
+import { breakpoints, colors } from "@/styles";
 
 export const NavbarRow = styled.div`
   height: 72px;
@@ -9,27 +9,30 @@ export const NavbarRow = styled.div`
   border-bottom: 1px solid ${colors.darkPurple};
 `;
 
-export const NavbarLeft = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 export const NavbarRight = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+
+  @media (max-width: ${breakpoints.phone}) {
+    gap: 0px;
+    margin-right: -16px;
+  }
 `;
 
 export const NavbarHamburger = styled.img`
   margin-left: 32px;
   margin-top: 3px;
+
+  @media (max-width: ${breakpoints.phone}) {
+    display: none;
+  }
 `;
 
 export const NavbarPigmo = styled.img`
   margin-left: 12px;
-`;
 
-export const NavbarLink = styled.a`
-  display: flex;
-  align-items: center;
+  @media (max-width: ${breakpoints.phone}) {
+    margin-left: 16px;
+  }
 `;

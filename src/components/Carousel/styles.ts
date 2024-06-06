@@ -17,6 +17,7 @@ export const CarouselContent = styled.div`
     scroll-snap-type: x mandatory;
     padding-bottom: 20px;
     -webkit-overflow-scrolling: touch;
+    margin-left: 20px;
   }
 `;
 
@@ -24,12 +25,20 @@ export const CarouselContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 52px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    svg,
+    img {
+      margin-left: 20px;
+    }
+  }
 `;
 
 export const CarouselCard = styled.img`
   transition: all 0.3s;
 
-  &:hover {
+  &:hover,
+  &:active {
     transform: translateY(-3%);
   }
 `;
@@ -40,7 +49,8 @@ export const CarouselVoleiCard = styled.img`
   transition: all 0.3s;
   border-radius: 8px;
 
-  &:hover {
+  &:hover,
+  &:active {
     transform: translateY(-3%);
   }
 `;

@@ -20,7 +20,8 @@ export const CriptoCardLink = styled.a`
   );
   transition: all 0.3s;
 
-  &:hover {
+  &:hover,
+  &:active {
     background: linear-gradient(
       129deg,
       rgba(204, 149, 215, 0.08) 63.84%,

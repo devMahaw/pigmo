@@ -1,4 +1,5 @@
-import { GlobalCss, Width } from "@/styles";
+import { useState } from "react";
+import { GlobalCss, Overlay, Width } from "@/styles";
 import Head from "next/head";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
@@ -6,12 +7,19 @@ import Banner from "@/components/Banner";
 import Carousel from "@/components/Carousel";
 import Footer from "@/components/Footer";
 import Sidebar from "@/components/Sidebar";
+import Button from "@/components/Button";
 
 export const myFont = localFont({
   src: "../../public/fonts/aglet-sans-bold.otf",
 });
 
 export default function Home() {
+  const [isSidebarVisible, setSidebarVisible] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarVisible(!isSidebarVisible);
+  };
+
   return (
     <>
       <Head>
@@ -25,7 +33,8 @@ export default function Home() {
       </Head>
       <GlobalCss />
       <div className={myFont.className}>
-        <Sidebar />
+        {isSidebarVisible && <Overlay />}
+        <Sidebar isActive={isSidebarVisible} />
         <Width>
           <header>
             <Navbar />
@@ -48,6 +57,13 @@ export default function Home() {
             <Footer />
           </footer>
         </Width>
+        <Button
+          variant="buttonMenu"
+          title="Clique aqui para visualizar a barra lateral"
+          onClick={toggleSidebar}
+        >
+          MENU
+        </Button>
       </div>
     </>
   );

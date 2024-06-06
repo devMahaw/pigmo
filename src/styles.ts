@@ -18,10 +18,18 @@ export const colors = {
 
 export const breakpoints = {
   desktop: "1366px",
-  tablet: "768px",
+  phone: "768px",
 };
 
 export const GlobalCss = createGlobalStyle`
+    @keyframes Fade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
     
     * {
     margin: 0px;
@@ -55,4 +63,16 @@ export const Width = styled.div`
     max-width: 1920px;
     margin-left: auto;
   }
+`;
+
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1;
+  animation: Fade 0.5s ease-in-out forwards;
 `;

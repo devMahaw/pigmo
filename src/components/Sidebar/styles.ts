@@ -2,17 +2,20 @@ import styled from "styled-components";
 import { breakpoints, colors } from "@/styles";
 import { Props } from "../Button";
 
-export const SidebarContainer = styled.div`
+export const SidebarContainer = styled.div<Props>`
   position: fixed;
+  background-color: ${colors.darkerPurple};
   top: 0;
   left: 0;
   height: 100vh;
   width: 240px;
   border-right: 1px solid ${colors.darkPurple};
   padding: 16px 0px;
+  z-index: 2;
 
   @media (max-width: ${breakpoints.desktop}) {
-    display: none;
+    display: ${({ isActive }) => (isActive ? "block" : "none")};
+    animation: Fade 0.5s ease-in-out forwards;
   }
 `;
 
@@ -50,7 +53,8 @@ export const SidebarLink = styled.a`
     font-size: 14px;
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     background: linear-gradient(90deg, #ff01b7 0%, #ff6864 100.01%);
     width: 94px;
     height: 40px;
@@ -63,17 +67,8 @@ export const SidebarLink = styled.a`
     }
 
     span {
-      @keyframes slideRight {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
       display: block;
-      animation: slideDown 0.8s ease-in-out;
+      animation: Fade 0.8s ease-in-out;
     }
   }
 `;
@@ -85,7 +80,8 @@ export const SidebarListItem = styled.li`
   border-radius: 8px;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:active {
     background: rgba(204, 149, 215, 0.12) 63.84%;
 
     svg path {
@@ -113,18 +109,9 @@ export const SidebarListItemLink = styled.a`
 `;
 
 export const SidebarClickedItem = styled.div<Props>`
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
   display: ${(props) => (props.isActive ? "block" : "none")};
   overflow: hidden;
-  animation: slideDown 0.4s ease-in-out;
+  animation: Fade 0.4s ease-in-out;
 `;
 
 export const SidebarHelp = styled.div`

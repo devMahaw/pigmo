@@ -1,11 +1,30 @@
 import styled from "styled-components";
-import { colors } from "@/styles";
+import { breakpoints, colors } from "@/styles";
 import { Props } from ".";
+
+export const FooterPigmoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+`;
+
+export const FooterLinksContainer = styled.div`
+  display: flex;
+  margin-left: 160px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    margin-left: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
 
 export const FooterText = styled.p`
   font-size: 12px;
   line-height: 32px;
   letter-spacing: 28px;
+  margin-left: 24px;
 
   span {
     color: ${colors.lightPurple};
@@ -38,7 +57,7 @@ export const FooterLink = styled.a`
   width: 420px;
   height: 90px;
   border-radius: 10px;
-  margin: 40px 0px;
+  margin: 40px 20px;
 
   img {
     margin-left: 20px;
@@ -48,6 +67,14 @@ export const FooterLink = styled.a`
     font-size: 20px;
     line-height: 24px;
     margin-left: 24px;
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 420px;
+
+    p {
+      display: none;
+    }
   }
 `;
 
@@ -60,14 +87,61 @@ export const FooterLinkDiscord = styled(FooterLink)`
     );
 
   box-shadow: 0px 11px 26.8px 0px rgba(233, 0, 131, 0.24);
+  margin-left: 180px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    background: none;
+    box-shadow: none;
+    margin-left: 140px;
+  }
 `;
 
 export const FooterLinkTelegram = styled(FooterLink)`
   background: linear-gradient(96.45deg, #34bdc6 19.95%, #299cdc 115.62%);
   box-shadow: 0px 11px 26.8px 0px rgba(44, 165, 214, 0.07);
+
+  @media (max-width: ${breakpoints.desktop}) {
+    background: none;
+    box-shadow: none;
+  }
 `;
 
 export const FooterLinkTwitter = styled(FooterLink)`
   background: linear-gradient(96.45deg, #0d0b0c 19.95%, #1c1717 115.62%);
   box-shadow: 0px 11px 26.8px 0px rgba(42, 26, 47, 0.29);
+
+  @media (max-width: ${breakpoints.desktop}) {
+    background: none;
+    box-shadow: none;
+  }
+`;
+
+export const FooterContact = styled.div`
+  display: flex;
+
+  p {
+    margin: 0px 160px 0px 16px;
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    img {
+      margin-left: 60px;
+    }
+
+    p {
+      width: 100px;
+      margin: 0px 40px 0px 16px;
+    }
+  }
+`;
+
+export const FooterInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    margin-bottom: 40px;
+  }
 `;

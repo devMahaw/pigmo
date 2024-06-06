@@ -30,14 +30,8 @@ export default function Footer({ onClick }: Props) {
         }}
       >
         <div>
-          <div style={{ display: "flex", marginLeft: "160px" }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginTop: "80px",
-              }}
-            >
+          <S.FooterLinksContainer>
+            <S.FooterPigmoContainer>
               <img
                 src="/assets/footerImages/pigmoLogoWhite.png"
                 alt="Pigmo Logo"
@@ -47,7 +41,7 @@ export default function Footer({ onClick }: Props) {
                   src="/assets/footerImages/pigNose.svg"
                   alt="Nariz de porco"
                 />
-                <S.FooterText style={{ marginLeft: "24px" }}>
+                <S.FooterText>
                   <span>BEYOND</span> LUCK
                 </S.FooterText>
                 <img
@@ -55,7 +49,7 @@ export default function Footer({ onClick }: Props) {
                   alt="Nariz de porco"
                 />
               </div>
-            </div>
+            </S.FooterPigmoContainer>
             <div
               style={{
                 display: "flex",
@@ -153,18 +147,18 @@ export default function Footer({ onClick }: Props) {
                 </div>
               </S.FooterList>
             </div>
-          </div>
+          </S.FooterLinksContainer>
           <div>
             <div style={{ display: "flex" }}>
-              <S.FooterLinkDiscord href="" style={{ marginLeft: "180px" }}>
+              <S.FooterLinkDiscord href="">
                 <img src="/assets/footerImages/discord.png" alt="Discord" />
                 <p>Join Discord's largest community of players now!</p>
               </S.FooterLinkDiscord>
-              <S.FooterLinkTelegram href="" style={{ marginLeft: "20px" }}>
+              <S.FooterLinkTelegram href="">
                 <img src="/assets/footerImages/telegram.svg" alt="Telegram" />
                 <p>Pigmo is also on Telegram. Discover more now</p>
               </S.FooterLinkTelegram>
-              <S.FooterLinkTwitter href="" style={{ marginLeft: "20px" }}>
+              <S.FooterLinkTwitter href="">
                 <img src="/assets/footerImages/twitter.svg" alt="Twitter" />
                 <p>Follow us on X and keep up everything about us</p>
               </S.FooterLinkTwitter>
@@ -172,14 +166,7 @@ export default function Footer({ onClick }: Props) {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          height: "72px",
-        }}
-      >
+      <S.FooterInfo>
         <div style={{ marginLeft: "40px" }}>
           <p style={{ fontSize: "14px" }}>
             @2024 Pigmo{" "}
@@ -189,7 +176,7 @@ export default function Footer({ onClick }: Props) {
             </span>
           </p>
         </div>
-        <div style={{ display: "flex" }}>
+        <S.FooterContact>
           <img
             src="/assets/footerImages/envelope.svg"
             alt="Envelope"
@@ -199,13 +186,12 @@ export default function Footer({ onClick }: Props) {
             style={{
               fontSize: "14px",
               color: `${colors.lightPurple}`,
-              margin: "0px 160px 0px 16px",
             }}
           >
             CONTACT US
           </p>
-        </div>
-      </div>
+        </S.FooterContact>
+      </S.FooterInfo>
     </div>
   );
 }

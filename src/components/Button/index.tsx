@@ -1,7 +1,12 @@
 import * as S from "./styles";
 
 export type Props = {
-  variant: "buttonDefault" | "buttonLogin" | "buttonIco" | "buttonDrop";
+  variant:
+    | "buttonDefault"
+    | "buttonLogin"
+    | "buttonIco"
+    | "buttonDrop"
+    | "buttonMenu";
   title: string;
   children: React.ReactNode;
   isActive?: boolean;
@@ -47,6 +52,12 @@ export default function Button({
         >
           {children}
         </S.ButtonDrop>
+      );
+    case "buttonMenu":
+      return (
+        <S.ButtonMenu variant={variant} title={title} onClick={onClick}>
+          {children}
+        </S.ButtonMenu>
       );
     default:
       return null;

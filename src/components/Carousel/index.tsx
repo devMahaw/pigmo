@@ -13,13 +13,7 @@ export default function Carousel({ variant }: Props) {
       return (
         <div style={{ display: "flex", justifyContent: "center" }}>
           <S.CarouselRow>
-            <S.CarouselContainer
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginTop: "42px",
-              }}
-            >
+            <S.CarouselContainer>
               <svg
                 width="20"
                 height="20"

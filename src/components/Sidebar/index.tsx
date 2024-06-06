@@ -4,7 +4,7 @@ import { colors } from "@/styles";
 import Button from "../Button";
 import { useState } from "react";
 
-export default function Sidebar() {
+export default function Sidebar({ isActive }) {
   const [clickedItem, setClickedItem] = useState("");
 
   const handleButtonClick = (item) => {
@@ -12,7 +12,7 @@ export default function Sidebar() {
   };
 
   return (
-    <S.SidebarContainer>
+    <S.SidebarContainer isActive={isActive}>
       <S.SidebarLinksContainer>
         <S.SidebarLink href="">
           <svg
@@ -135,7 +135,7 @@ export default function Sidebar() {
         <div>
           <Button
             variant="buttonDrop"
-            title={"Clique aqui para ver os jogos de Cassino"}
+            title="Clique aqui para ver os jogos de Cassino"
             onClick={() => handleButtonClick("CASSINO")}
             isActive={clickedItem === "CASSINO"}
           >
@@ -278,7 +278,7 @@ export default function Sidebar() {
         <div>
           <Button
             variant="buttonDrop"
-            title={"Clique aqui para ver os jogos de Cassino"}
+            title="Clique aqui para ver os jogos de Cassino"
             onClick={() => handleButtonClick("TRADE")}
             isActive={clickedItem === "TRADE"}
           >
@@ -300,7 +300,7 @@ export default function Sidebar() {
         <div>
           <Button
             variant="buttonDrop"
-            title={"Clique aqui para ver os jogos de Cassino"}
+            title="Clique aqui para ver os jogos de Cassino"
             onClick={() => handleButtonClick("ESPORTES")}
             isActive={clickedItem === "ESPORTES"}
           >
