@@ -7,6 +7,7 @@ export type Props = {
   isActive?: boolean;
   onClick?: () => void;
   style?: React.CSSProperties;
+  className?: string;
 };
 
 export default function Button({

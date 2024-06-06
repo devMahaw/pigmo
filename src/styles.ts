@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
 
 export const colors = {
   darkerPurple: "#170D19",
@@ -44,4 +44,15 @@ export const GlobalCss = createGlobalStyle`
     button {
       cursor: pointer;
     }
+`;
+
+export const Width = styled.div`
+  max-width: calc(100% - 240px);
+  width: 100%;
+  margin-left: auto;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    max-width: 1920px;
+    margin-left: auto;
+  }
 `;

@@ -1,4 +1,4 @@
-import { GlobalCss } from "@/styles";
+import { GlobalCss, Width } from "@/styles";
 import Head from "next/head";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
@@ -26,13 +26,7 @@ export default function Home() {
       <GlobalCss />
       <div className={myFont.className}>
         <Sidebar />
-        <div
-          style={{
-            maxWidth: "calc(100% - 240px)",
-            width: "100%",
-            marginLeft: "auto",
-          }}
-        >
+        <Width>
           <header>
             <Navbar />
           </header>
@@ -53,7 +47,7 @@ export default function Home() {
           <footer>
             <Footer />
           </footer>
-        </div>
+        </Width>
       </div>
     </>
   );

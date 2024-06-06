@@ -29,7 +29,7 @@ export const ButtonDefault = styled.button`
 
   &:active {
     transform: translateY(2px);
-    box-shadow: 0 1px ${colors.magenta}, inset 0 1px ${colors.lightRed},
+    box-shadow: 0 3px ${colors.magenta}, inset 0 1px ${colors.lightRed},
       inset 0 0 50px -25px ${colors.lightRed}, 0 0 50px -12px #e90083a3;
   }
 `;
@@ -48,6 +48,10 @@ export const ButtonLogin = styled.button`
   &:hover {
     color: ${colors.hotPink};
   }
+
+  &:active {
+    color: ${colors.hotPink};
+  }
 `;
 
 export const ButtonIco = styled.button`
@@ -63,6 +67,12 @@ export const ButtonIco = styled.button`
   margin-right: 8px;
 
   &:hover {
+    border-color: ${colors.darkPurpleIcons};
+    background: linear-gradient(180deg, rgba(37, 25, 41, 0) 0%, #38253f 100%);
+    box-shadow: 0px 7px 9.3px -6px #eb0582;
+  }
+
+  &:active {
     border-color: ${colors.darkPurpleIcons};
     background: linear-gradient(180deg, rgba(37, 25, 41, 0) 0%, #38253f 100%);
     box-shadow: 0px 7px 9.3px -6px #eb0582;

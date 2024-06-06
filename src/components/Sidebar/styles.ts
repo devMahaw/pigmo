@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "@/styles";
+import { breakpoints, colors } from "@/styles";
 import { Props } from "../Button";
 
 export const SidebarContainer = styled.div`
@@ -10,6 +10,10 @@ export const SidebarContainer = styled.div`
   width: 240px;
   border-right: 1px solid ${colors.darkPurple};
   padding: 16px 0px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    display: none;
+  }
 `;
 
 export const SidebarLinksContainer = styled.div`
