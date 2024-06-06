@@ -59,7 +59,17 @@ export const SidebarLink = styled.a`
     }
 
     span {
+      @keyframes slideRight {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
       display: block;
+      animation: slideDown 0.8s ease-in-out;
     }
   }
 `;
@@ -99,7 +109,18 @@ export const SidebarListItemLink = styled.a`
 `;
 
 export const SidebarClickedItem = styled.div<Props>`
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   display: ${(props) => (props.isActive ? "block" : "none")};
+  overflow: hidden;
+  animation: slideDown 0.4s ease-in-out;
 `;
 
 export const SidebarHelp = styled.div`
