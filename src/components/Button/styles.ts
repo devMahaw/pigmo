@@ -3,7 +3,13 @@ import { breakpoints, colors } from "@/styles";
 import { myFont } from "@/pages";
 import { Props } from ".";
 
-export const ButtonDefault = styled.button`
+type ButtonProps = {
+  variant?: string;
+  title?: string;
+  isActive?: boolean;
+};
+
+export const ButtonDefault = styled.button<ButtonProps>`
   color: ${colors.lightGray};
   width: 98px;
   height: 40px;
@@ -33,7 +39,7 @@ export const ButtonDefault = styled.button`
   }
 `;
 
-export const ButtonLogin = styled.button`
+export const ButtonLogin = styled.button<ButtonProps>`
   color: ${colors.lightGray};
   background-color: transparent;
   border: none;
@@ -50,7 +56,7 @@ export const ButtonLogin = styled.button`
   }
 `;
 
-export const ButtonIco = styled.button`
+export const ButtonIco = styled.button<ButtonProps>`
   background-color: transparent;
   width: 40px;
   height: 40px;
@@ -74,7 +80,7 @@ export const ButtonIco = styled.button`
   }
 `;
 
-export const ButtonDrop = styled.button<Props>`
+export const ButtonDrop = styled.button<Props, ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,7 +104,7 @@ export const ButtonDrop = styled.button<Props>`
   }
 `;
 
-export const ButtonMenu = styled.button<Props>`
+export const ButtonMenu = styled.button<Props, ButtonProps>`
   display: none;
   font-family: ${myFont.style.fontFamily};
   font-size: 18px;
