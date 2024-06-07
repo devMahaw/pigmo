@@ -76,11 +76,13 @@ export const BannerButtons = styled.div`
   margin-left: 270px;
 
   @media (max-width: ${breakpoints.desktop}) {
-    margin-left: 20px;
+    display: block;
+    margin-left: 250px;
   }
 
   @media (max-width: ${breakpoints.phone}) {
     display: block;
+    margin-left: 20px;
   }
 `;
 
@@ -107,11 +109,11 @@ export const BannerButtonsIcos = styled.div`
 
   @media (max-width: ${breakpoints.desktop}) {
     margin-top: 20px;
-    margin-right: 50px;
+    margin-right: 70px;
   }
 
   @media (max-width: ${breakpoints.phone}) {
     margin-top: 20px;
-    margin-left: -58px;
+    margin-left: -40px;
   }
 `;

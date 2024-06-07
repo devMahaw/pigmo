@@ -211,10 +211,13 @@ export const FooterInfoText = styled.div`
 
   p {
     font-size: 14px;
-    width: 170px;
   }
 
   @media (max-width: ${breakpoints.phone}) {
     margin-left: 20px;
+
+    p {
+      width: 170px;
+    }
   }
 `;
