@@ -15,10 +15,7 @@ export default function Banner() {
           </p>
         </S.BannerText>
         <S.BannerButtons>
-          <S.BannerButtonDefault
-            variant="buttonDefault"
-            title="Clique aqui para registrar uma conta nova"
-          >
+          <S.BannerButtonDefault title="Clique aqui para registrar uma conta nova">
             QUERO ME REGISTRAR
           </S.BannerButtonDefault>
           <S.BannerButtonsIcos>
