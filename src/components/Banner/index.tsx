@@ -18,7 +18,6 @@ export default function Banner() {
           <S.BannerButtonDefault
             variant="buttonDefault"
             title="Clique aqui para registrar uma conta nova"
-            className="banner-button-default"
           >
             QUERO ME REGISTRAR
           </S.BannerButtonDefault>
