@@ -4,10 +4,14 @@ import { colors } from "@/styles";
 import Button from "../Button";
 import { useState } from "react";
 
-export default function Sidebar({ isActive }) {
+type SidebarProps = {
+  isActive?: boolean;
+};
+
+export default function Sidebar({ isActive }: SidebarProps) {
   const [clickedItem, setClickedItem] = useState("");
 
-  const handleButtonClick = (item) => {
+  const handleButtonClick = (item: string) => {
     setClickedItem(item === clickedItem ? "" : item);
   };
 
@@ -81,6 +85,7 @@ export default function Sidebar({ isActive }) {
           </span>
         </div>
         <CriptoValueDiv
+          cripto="none"
           green={true}
           style={{ width: "50px", height: "16px", margin: "5px 12px" }}
         >

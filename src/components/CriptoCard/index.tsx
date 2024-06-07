@@ -3,7 +3,7 @@ import { colors } from "@/styles";
 
 export type Props = {
   green: boolean;
-  cripto: "btc" | "eth" | "sol" | "bonk" | "doge" | "shib";
+  cripto: "btc" | "eth" | "sol" | "bonk" | "doge" | "shib" | "none";
 };
 
 export default function CriptoCard({ green, cripto }: Props) {
@@ -14,6 +14,7 @@ export default function CriptoCard({ green, cripto }: Props) {
     bonk: "/assets/criptoCarousel/bonk.svg",
     doge: "/assets/criptoCarousel/doge.svg",
     shib: "/assets/criptoCarousel/shiba.svg",
+    none: "",
   };
 
   return (
@@ -28,7 +29,7 @@ export default function CriptoCard({ green, cripto }: Props) {
         <span style={{ marginRight: "30px", marginLeft: "12px" }}>
           {cripto.toUpperCase()}
         </span>
-        <S.CriptoValueDiv green={green}>
+        <S.CriptoValueDiv cripto="none" green={green}>
           <img
             src={
               green

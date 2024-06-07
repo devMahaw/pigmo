@@ -10,7 +10,7 @@ export type Props = {
 export default function Footer({ onClick }: Props) {
   const [clickedItem, setClickedItem] = useState("");
 
-  const handleButtonClick = (item) => {
+  const handleButtonClick = (item: string) => {
     if (item === clickedItem) {
       setClickedItem("");
     } else {
