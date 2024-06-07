@@ -146,7 +146,7 @@ export default function Footer({ onClick }: Props) {
             <div style={{ display: "flex" }}>
               <S.FooterLinkDiscord href="">
                 <img src="/assets/footerImages/discord.png" alt="Discord" />
-                <p>Join Discord's largest community of players now!</p>
+                <p>Join Discord&apos;s largest community of players now!</p>
               </S.FooterLinkDiscord>
               <S.FooterLinkTelegram href="">
                 <img src="/assets/footerImages/telegram.svg" alt="Telegram" />
