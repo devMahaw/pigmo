@@ -12,7 +12,7 @@ export default function Navbar() {
     <S.NavbarRow>
       <div style={{ display: "flex", alignItems: "center" }}>
         <S.NavbarHamburger
-          src="/assets/navBarImages/hamburger.svg"
+          src="/assets/navbarImages/hamburger.svg"
           alt="Hamburger Menu"
         />
         <a
@@ -22,7 +22,7 @@ export default function Navbar() {
         >
           <h1 style={{ marginTop: "6px" }}>
             <S.NavbarPigmo
-              src="/assets/navBarImages/pigmoLogo.svg"
+              src="/assets/navbarImages/pigmoLogo.svg"
               alt="Pigmo Logo"
             />
           </h1>
