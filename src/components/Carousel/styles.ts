@@ -32,6 +32,12 @@ export const CarouselContainer = styled.div`
       margin-left: 20px;
     }
   }
+
+  @media (max-width: ${breakpoints.phone}) {
+    span {
+      display: none;
+    }
+  }
 `;
 
 export const CarouselCard = styled.img`

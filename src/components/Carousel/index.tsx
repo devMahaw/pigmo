@@ -26,9 +26,9 @@ export default function Carousel({ variant }: Props) {
                   fill="#E90083"
                 />
               </svg>
-              <span style={{ marginLeft: "6px", marginRight: "40px" }}>
+              <p style={{ marginLeft: "6px", marginRight: "40px" }}>
                 CRIPTOMOEDAS
-              </span>
+              </p>
               <span
                 style={{ fontSize: "14px", color: `${colors.lightPurple}` }}
               >
@@ -86,8 +86,7 @@ export default function Carousel({ variant }: Props) {
                   fill="#E90083"
                 />
               </svg>
-
-              <span style={{ marginLeft: "6px" }}>CASSINO</span>
+              <p style={{ marginLeft: "6px" }}>CASSINO</p>
             </S.CarouselContainer>
             <S.CarouselContent style={{ gap: "20px" }}>
               <a href="">
@@ -146,7 +145,7 @@ export default function Carousel({ variant }: Props) {
                 src="/assets/sportsCarousel/americanBall.svg"
                 alt="Bola de futebol americano"
               />
-              <span style={{ marginLeft: "6px" }}>ESPORTES</span>
+              <p style={{ marginLeft: "6px" }}>ESPORTES</p>
             </S.CarouselContainer>
             <S.CarouselContent style={{ gap: "22px" }}>
               <a href="">

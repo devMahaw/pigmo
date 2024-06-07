@@ -20,10 +20,12 @@ export default function Navbar() {
           onClick={handleLogoClick}
           style={{ display: "flex", alignItems: "center" }}
         >
-          <S.NavbarPigmo
-            src="/assets/navBarImages/pigmoLogo.svg"
-            alt="Pigmo Logo"
-          />
+          <h1 style={{ marginTop: "6px" }}>
+            <S.NavbarPigmo
+              src="/assets/navBarImages/pigmoLogo.svg"
+              alt="Pigmo Logo"
+            />
+          </h1>
         </a>
       </div>
       <S.NavbarRight>

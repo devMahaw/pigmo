@@ -31,6 +31,7 @@ export const BannerText = styled.div`
     line-height: 22px;
     margin-bottom: 32px;
     color: ${colors.lightPurple};
+    width: 400px;
   }
 
   @media (max-width: ${breakpoints.desktop}) {
@@ -42,15 +43,31 @@ export const BannerText = styled.div`
       text-align: center;
     }
   }
+
+  @media (max-width: ${breakpoints.phone}) {
+    margin-left: 30px;
+    margin-top: 20px;
+
+    p {
+      width: 250px;
+      font-size: 18px;
+      text-align: left;
+    }
+  }
 `;
 
-export const BannerTitle = styled.h1`
+export const BannerTitle = styled.h2`
   font-size: 42px;
   line-height: 48px;
   margin-bottom: 12px;
 
   span {
     color: ${colors.hotPink};
+  }
+
+  @media (max-width: ${breakpoints.phone}) {
+    font-size: 30px;
+    width: 250px;
   }
 `;
 
@@ -59,6 +76,10 @@ export const BannerButtons = styled.div`
   margin-left: 270px;
 
   @media (max-width: ${breakpoints.desktop}) {
+    margin-left: 20px;
+  }
+
+  @media (max-width: ${breakpoints.phone}) {
     display: block;
   }
 `;
@@ -72,6 +93,12 @@ export const BannerButtonDefault = styled(ButtonDefault)`
     font-size: 18px;
     margin-right: 0px;
   }
+
+  @media (max-width: ${breakpoints.phone}) {
+    width: 260px;
+    font-size: 14px;
+    margin-left: 8px;
+  }
 `;
 
 export const BannerButtonsIcos = styled.div`
@@ -81,5 +108,10 @@ export const BannerButtonsIcos = styled.div`
   @media (max-width: ${breakpoints.desktop}) {
     margin-top: 20px;
     margin-right: 50px;
+  }
+
+  @media (max-width: ${breakpoints.phone}) {
+    margin-top: 20px;
+    margin-left: -58px;
   }
 `;

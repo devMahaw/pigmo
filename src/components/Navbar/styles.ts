@@ -33,6 +33,6 @@ export const NavbarPigmo = styled.img`
   margin-left: 12px;
 
   @media (max-width: ${breakpoints.phone}) {
-    margin-left: 16px;
+    margin-left: 32px;
   }
 `;

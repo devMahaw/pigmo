@@ -50,13 +50,7 @@ export default function Footer({ onClick }: Props) {
                 />
               </div>
             </S.FooterPigmoContainer>
-            <div
-              style={{
-                display: "flex",
-                marginLeft: "60px",
-                marginTop: "50px",
-              }}
-            >
+            <S.FooterListContainer>
               <S.FooterList>
                 <span>PLATAFORM</span>
                 <S.FooterListItem
@@ -146,7 +140,7 @@ export default function Footer({ onClick }: Props) {
                   </S.FooterListItem>
                 </div>
               </S.FooterList>
-            </div>
+            </S.FooterListContainer>
           </S.FooterLinksContainer>
           <div>
             <div style={{ display: "flex" }}>
@@ -167,15 +161,15 @@ export default function Footer({ onClick }: Props) {
         </div>
       </div>
       <S.FooterInfo>
-        <div style={{ marginLeft: "40px" }}>
-          <p style={{ fontSize: "14px" }}>
+        <S.FooterInfoText>
+          <p>
             @2024 Pigmo{" "}
             <span style={{ color: `${colors.lightPurple}` }}>
               - All rights reserved. Pigmo is licensed and authorized, operating
               under the Game Service Provider Master License.
             </span>
           </p>
-        </div>
+        </S.FooterInfoText>
         <S.FooterContact>
           <img
             src="/assets/footerImages/envelope.svg"

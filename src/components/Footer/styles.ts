@@ -6,6 +6,11 @@ export const FooterPigmoContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 80px;
+
+  @media (max-width: ${breakpoints.phone}) {
+    flex-direction: column;
+    margin-top: 40px;
+  }
 `;
 
 export const FooterLinksContainer = styled.div`
@@ -26,8 +31,26 @@ export const FooterText = styled.p`
   letter-spacing: 28px;
   margin-left: 24px;
 
+  @media (max-width: ${breakpoints.phone}) {
+    width: 200px;
+    text-align: center;
+    margin-left: 12px;
+  }
+
   span {
     color: ${colors.lightPurple};
+  }
+`;
+
+export const FooterListContainer = styled.div`
+  display: flex;
+  margin-left: 60px;
+  margin-top: 50px;
+
+  @media (max-width: ${breakpoints.phone}) {
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: 30px;
   }
 `;
 
@@ -37,6 +60,14 @@ export const FooterList = styled.ul`
   span {
     font-size: 16px;
     line-height: 28px;
+  }
+
+  @media (max-width: ${breakpoints.phone}) {
+    display: flex;
+
+    span {
+      padding: 20px;
+    }
   }
 `;
 
@@ -48,6 +79,10 @@ export const FooterListItem = styled.li<Props>`
   list-style: ${(props) => (props.isActive ? "disc" : "none")};
   color: ${(props) =>
     props.isActive ? `${colors.hotPink}` : `${colors.lightPurple}`};
+
+  @media (max-width: ${breakpoints.phone}) {
+    margin-right: 10px;
+  }
 `;
 
 export const FooterLink = styled.a`
@@ -76,6 +111,10 @@ export const FooterLink = styled.a`
       display: none;
     }
   }
+
+  @media (max-width: ${breakpoints.phone}) {
+    width: 30px;
+  }
 `;
 
 export const FooterLinkDiscord = styled(FooterLink)`
@@ -93,6 +132,10 @@ export const FooterLinkDiscord = styled(FooterLink)`
     background: none;
     box-shadow: none;
     margin-left: 140px;
+  }
+
+  @media (max-width: ${breakpoints.phone}) {
+    margin-left: 80px;
   }
 `;
 
@@ -114,6 +157,10 @@ export const FooterLinkTwitter = styled(FooterLink)`
     background: none;
     box-shadow: none;
   }
+
+  @media (max-width: ${breakpoints.phone}) {
+    margin-right: 100px;
+  }
 `;
 
 export const FooterContact = styled.div`
@@ -133,6 +180,14 @@ export const FooterContact = styled.div`
       margin: 0px 40px 0px 16px;
     }
   }
+
+  @media (max-width: ${breakpoints.phone}) {
+    margin-right: 300px;
+
+    p {
+      margin: 0px 0px 0px 4px;
+    }
+  }
 `;
 
 export const FooterInfo = styled.div`
@@ -143,5 +198,23 @@ export const FooterInfo = styled.div`
 
   @media (max-width: ${breakpoints.desktop}) {
     margin-bottom: 40px;
+  }
+
+  @media (max-width: ${breakpoints.phone}) {
+    margin-bottom: 40px;
+    height: 120px;
+  }
+`;
+
+export const FooterInfoText = styled.div`
+  margin-left: 40px;
+
+  p {
+    font-size: 14px;
+    width: 170px;
+  }
+
+  @media (max-width: ${breakpoints.phone}) {
+    margin-left: 20px;
   }
 `;

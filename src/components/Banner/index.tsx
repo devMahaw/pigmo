@@ -10,8 +10,8 @@ export default function Banner() {
             Boas vindas ao <span>Pigmo</span>!
           </S.BannerTitle>
           <p>
-            Jogue inteligente conosco. Crie sua conta
-            <br /> ou entre agora para ganhar recompensas.
+            Jogue inteligente conosco. Crie sua conta ou entre agora para ganhar
+            recompensas.
           </p>
         </S.BannerText>
         <S.BannerButtons>

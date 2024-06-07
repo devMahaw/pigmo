@@ -71,7 +71,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   z-index: 1;
   animation: Fade 0.5s ease-in-out forwards;
