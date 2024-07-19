@@ -41,13 +41,6 @@ export const GlobalCss = createGlobalStyle`
     text-decoration: none;
     }
 
-    body {
-      background-color: ${colors.darkerPurple};
-      color: ${colors.white};
-      max-width: 1920px;
-      width: 100%;
-      height: 100%;
-    }
 
     button {
       cursor: pointer;
