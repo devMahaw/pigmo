@@ -12,7 +12,7 @@ export const colors = {
   hotPink: "#E90083",
   green: "#24D861",
   red: "#DE3449",
-  lightRed: "#ffa222",
+  lightRed: "#ffa2a0",
   magenta: "#7f064d",
 };
 
